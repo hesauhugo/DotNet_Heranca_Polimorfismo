@@ -76,3 +76,11 @@
 ### Polimorfismo em tempo de execução ( override/late binding)
 * Depende de herança
 * sobrescrevendo o método
+
+## Construtor por herança
+* Se na classe pai houver um construtor, as classes filhas devem implementa-lo
+```csharp
+        public Professor(string nome):base(nome){
+            
+        }
+```
