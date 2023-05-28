@@ -11,6 +11,7 @@ namespace DotNet_Heranca_Polimorfismo.Models
         public Pessoa(string nome){
             Nome =nome;
         }
+        
         public string Nome {get;set;}
         public int Idade {get; set;}
 

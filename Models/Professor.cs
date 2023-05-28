@@ -6,7 +6,7 @@ namespace DotNet_Heranca_Polimorfismo.Models
     /// <summary>
     /// 
     /// </summary>
-    public class Professor:Pessoa
+    public sealed class Professor:Pessoa
     {
         public Professor(string nome):base(nome){
             

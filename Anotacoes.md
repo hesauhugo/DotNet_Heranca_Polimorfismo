@@ -84,3 +84,28 @@
             
         }
 ```
+
+# Classe Selada
+
+* Uma classe selada tem como objetivo de impedir que outras classes façam uma herança dela, ou seja, nenhuma classe pode ser sua derivada.
+
+* Também existem métodos e propriedades seladas.
+
+* A classe `Professor` está selada, ou seja, não pode ser herdada
+```csharp
+    public sealed class Professor:Pessoa{
+
+    }
+```
+* Tentamos criar uma classe que herda professor
+
+```csharp
+    public class Diretor:Professor
+    {
+    }
+```
+* o seguinte erro é apresentado
+
+```console
+    error CS0509: "Diretor": não é possível derivar do tipo sealed "Professor"
+```
