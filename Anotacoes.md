@@ -109,3 +109,34 @@
 ```console
     error CS0509: "Diretor": não é possível derivar do tipo sealed "Professor"
 ```
+
+## Método selado
+* A classe `Professor` possui o método selado
+```csharp
+    public class Professor:Pessoa
+    {
+        public Professor(string nome):base(nome){
+            
+        }
+        public decimal Salario {get; set;}
+
+        public sealed override void Apresentar(){
+            Console.WriteLine($"Olá, meu nome é {Nome}, tenho {Idade} e sou um professor e meu salário é {Salario}");
+        }
+
+    }
+```
+*  classe `Diretor` tenta implementa-la e não consegue
+```csharp
+    public class Diretor:Professor
+    {
+        public override void Apresentar(){
+            Console.WriteLine($"Olá, meu nome é {Nome}, tenho {Idade} e sou um professor e meu salário é {Salario}");
+        }
+
+    }
+```
+* Ao tentar rodar o projeto,  o seguinte output é apresentado
+```console
+    error CS0239: "Diretor.Apresentar()": não é possível substituir o membro herdado "Professor Apresentar()" porque ele é sealed
+```
